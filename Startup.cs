@@ -90,7 +90,13 @@ namespace MultiTenancyAngular
                     ValidateAudience = true,
                     ValidIssuer = appSettings.Site,
                     ValidAudience = appSettings.Audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+
+                    IssuerSigningKeyResolver = (string token , SecurityToken securityToken ,string key, TokenValidationParameters validationParameter)=>
+                    {
+                            
+                    }
+
                 };
 
             });

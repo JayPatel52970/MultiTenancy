@@ -16,6 +16,10 @@ namespace MultiTenancyAngular
         [Key]
         public string HostUrl { get; set; }
         [Required]
+        public string ApiKey { get; set; }
+        [Required]
+        public string SecretKey { get; set; }
+        [Required]
         public string DbConnectionString { get; set; }
         [Required]
         public string StorageConnectionString { get; set; }
